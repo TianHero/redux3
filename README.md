@@ -4,20 +4,20 @@
 > npm start
 
 
-# 手摸手带你撸redux：二阶(拆分actionCreators和actionTypes)
+# 手摸手带你撸redux：三阶(使用redux 的中间件 redux-thunk 把异步方法放进action里)
 先说一下redux的工作流程。
-- 第一步，创建一个store，相当于一个数据仓库；
-- 第二步，React Component根据store里面的state显示UI；
-- 第三步，React Component根据需求派发action给store。(dispatch(action))；
-- 第四步，store根据React Component派发的action去reducer里面找对应的操作；
-- 第五步，reducer告诉store怎么操作数据；
-- 第六步，store更新state；
-- 第七步，React Component根据store中的state更新UI；
+- 第一步,创建一个store，相当于一个数据仓库；
+- 第二步,React Component根据store里面的state显示UI；
+- 第三步,React Component根据需求派发action给store。(dispatch(action))；
+- 第四步,store根据React Component派发的action去reducer里面找对应的操作；
+- 第五步,reducer告诉store怎么操作数据；
+- 第六步,store更新state；
+- 第七步,React Component根据store中的state更新UI；
 
 ## 1-安装redux-thunk
 > npm install redux-thunk --save
 
-redux-thunk 是redux的中间件 可以把异步请求梵高action里面
+redux-thunk 是redux的中间件 可以把异步请求放进action里面
 
 ## 2-创建store
 --|src  
